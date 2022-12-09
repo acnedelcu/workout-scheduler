@@ -1,6 +1,7 @@
 {
   "name": "workoutscheduler",
   "version": "0.1.0",
+  "homepage": "https://acnedelcu.github.io/workout-scheduler/",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.1.3",
