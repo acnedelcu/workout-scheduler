@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore WorkoutScheduler/WorkoutScheduler/WorkoutScheduler.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build WorkoutScheduler/WorkoutScheduler/WorkoutScheduler.csproj --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test WorkoutScheduler/WorkoutScheduler/WorkoutScheduler.csproj --no-build --verbosity normal
