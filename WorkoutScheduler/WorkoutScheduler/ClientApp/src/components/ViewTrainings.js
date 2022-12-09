@@ -9,6 +9,15 @@ export class ViewTrainings extends Component {
       selectedIndex: 0,
     };
   }
+
+  getExcercises() {
+    // GET request using fetch with set headers
+    const headers = { 'Content-Type': 'application/json' }
+    fetch('https://api.npms.io/v2/search?q=react', { headers })
+        .then(response => response.json())
+        .then(data => this.setState({ totalReactPackages: data.total }));
+}
+
   render() {
     const check = (index) => this.setState({ selectedIndex: index });
     const checkNext = () => {
@@ -68,17 +77,19 @@ export class ViewTrainings extends Component {
                         d="M0,128L34.3,160C68.6,192,137,256,206,272C274.3,288,343,256,411,240C480,224,549,224,617,224C685.7,224,754,224,823,218.7C891.4,213,960,203,1029,181.3C1097.1,160,1166,128,1234,149.3C1302.9,171,1371,245,1406,282.7L1440,320L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
                       ></path>
                     </svg>
-                    <h1>Day 1</h1>
+                    <h1>Day 1 - Full body</h1>
                   </div>
                 </div>
                 <div>
                   <ul>
-                    <li>1. Leg Curls</li>
-                    <li>2. Leg Extensions</li>
-                    <li>3. Muscle-ups</li>
-                    <li>4. Leg Curls</li>
-                    <li>5. Leg Extensions</li>
-                    <li>6. Muscle-ups</li>
+                    <li>1. Flat bench press - 3 sets </li>
+                    <li>2. Chest fly - 3 sets (drop sets)</li>
+                    <li>3.Pull-Ups - 3 sets</li>
+                    <li>4. Wide grip cable rows cable - 3 sets</li>
+                    <li>5. Barbell Squats - 3 sets </li>
+                    <li>6. Dumbel lateral raises - 3 sets </li>
+                    <li>7. Shoulder raises - 3 sets </li>
+                    <li>8. Leg extensions- 3 sets </li>
                   </ul>
                 </div>
                 <div className="buttons-container">
@@ -100,17 +111,19 @@ export class ViewTrainings extends Component {
                         d="M0,128L34.3,160C68.6,192,137,256,206,272C274.3,288,343,256,411,240C480,224,549,224,617,224C685.7,224,754,224,823,218.7C891.4,213,960,203,1029,181.3C1097.1,160,1166,128,1234,149.3C1302.9,171,1371,245,1406,282.7L1440,320L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
                       ></path>
                     </svg>
-                    <h1>Day 1</h1>
+                    <h1>Day 2 - Strentgh day</h1>
                   </div>
                 </div>
                 <div>
                   <ul>
-                    <li>1. Leg Curls</li>
-                    <li>2. Leg Extensions</li>
-                    <li>3. Muscle-ups</li>
-                    <li>4. Leg Curls</li>
-                    <li>5. Leg Extensions</li>
+                    <li>1. Incline DB bench press - 3 sets</li>
+                    <li>2. Low cable fly - 3 sets (drop sets)</li>
+                    <li>3. Bent over rows - 3 sets</li>
+                    <li>4. Chin ups - 3 sets ( assisted) </li>
+                    <li>5. Romanian deadlift</li>
                     <li>6. Muscle-ups</li>
+                    <li>7. Seated shoulder press</li>
+                    <li>8. Lateral raise machine</li>
                   </ul>
                 </div>
                 <div className="buttons-container">
@@ -132,17 +145,19 @@ export class ViewTrainings extends Component {
                         d="M0,128L34.3,160C68.6,192,137,256,206,272C274.3,288,343,256,411,240C480,224,549,224,617,224C685.7,224,754,224,823,218.7C891.4,213,960,203,1029,181.3C1097.1,160,1166,128,1234,149.3C1302.9,171,1371,245,1406,282.7L1440,320L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
                       ></path>
                     </svg>
-                    <h1>Day 1</h1>
+                    <h1>Day 3 - Hypertrophy</h1>
                   </div>
                 </div>
                 <div>
                   <ul>
-                    <li>1. Leg Curls</li>
-                    <li>2. Leg Extensions</li>
-                    <li>3. Muscle-ups</li>
-                    <li>4. Leg Curls</li>
-                    <li>5. Leg Extensions</li>
-                    <li>6. Muscle-ups</li>
+                    <li>1. Incline DB bench press - 3 sets</li>
+                    <li>2. Dips - 3 sets</li>
+                    <li>3. Pull ups - 3 sets</li>
+                    <li>4. V handle cable rows - 3 sets</li>
+                    <li>5. Trap bar deadlift - 3 sets</li>
+                    <li>6. Lunges - 3 sets</li>
+                    <li>7. Seated shoulder press machine - 3 sets</li>
+                    <li>8. Facepulls - 3 sets</li>
                   </ul>
                 </div>
                 <div className="buttons-container">
