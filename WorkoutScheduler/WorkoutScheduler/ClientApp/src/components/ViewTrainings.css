@@ -2,6 +2,10 @@
   display: none;
 }
 
+.training-button {
+  display: none;
+}
+
 #trainings-slider {
   display: flex;
   margin-top: 140px;
@@ -22,7 +26,7 @@
 
 #slider label {
   margin: auto;
-  background-color: aliceblue;
+  background-color: rgb(235, 235, 235);
   width: 60%;
   height: 100%;
   border-radius: 4px;
@@ -53,3 +57,43 @@
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
   transform: translate3d(50%, 0, -100px);
 }
+
+.buttons-container {
+  display: inline-flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  margin: 3px;
+}
+
+.trainig-day {
+  color: #42303f;
+}
+
+.cart-button {
+  background-color: #f9f871;
+  border: none;
+  width: 32%;
+  box-shadow: 9px 6px 41px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 9px 6px 41px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 9px 6px 41px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 2%;
+  margin: 2px;
+  color: #42303f;
+  font-size: 16px;
+}
+
+li {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  color: #42303f;
+  font-size: 21px;
+}
+
+ul {
+  margin: 20px;
+}
+
