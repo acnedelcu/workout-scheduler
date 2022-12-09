@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export class Counter extends Component {
-  static displayName = Counter.name;
+export class MakePlan extends Component {
+  static displayName = MakePlan.name;
 
   constructor(props) {
     super(props);
@@ -18,11 +18,7 @@ export class Counter extends Component {
   render() {
     return (
       <div>
-        <h1>Counter</h1>
-
-        <p>This is a simple example of a React component.</p>
-
-        <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
+        <h1>Make a plan</h1>
 
         <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
       </div>
