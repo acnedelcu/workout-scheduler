@@ -1,17 +1,22 @@
-import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
+import ApiAuthorzationRoutes from "./components/api-authorization/ApiAuthorizationRoutes";
 import { MakePlan } from "./components/MakePlan";
 import { Home } from "./components/Home";
+import { ViewTrainings } from "./components/ViewTrainings";
 
 const AppRoutes = [
   {
     index: true,
-    element: <Home />
+    element: <Home />,
   },
   {
-    path: '/make-plan',
-    element: <MakePlan />
+    path: "/make-plan",
+    element: <MakePlan />,
   },
-  ...ApiAuthorzationRoutes
+  {
+    path: "/view-trainings",
+    element: <ViewTrainings />,
+  },
+  ...ApiAuthorzationRoutes,
 ];
 
 export default AppRoutes;
