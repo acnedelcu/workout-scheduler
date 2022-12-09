@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using WorkoutScheduler.Data;
+using WorkoutScheduler.Data.Repositories;
+using WorkoutScheduler.Data.Repositories.Interfaces;
 using WorkoutScheduler.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +35,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+builder.Services.AddTransient<IExerciseRepository, ExerciseRepository>();
+builder.Services.AddTransient<IScheduleRepository, ScheduleRepository>();
+builder.Services.AddTransient<IDetailRepository, DetailRepository>();
+builder.Services.AddTransient<ITrainingRepository, TrainingRepository>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
 
 var app = builder.Build();
 
