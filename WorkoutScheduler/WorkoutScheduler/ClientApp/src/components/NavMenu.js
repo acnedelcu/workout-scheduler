@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Collapse, Navbar, NavbarToggler, NavItem, NavLink } from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, NavItem, NavbarBrand, NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
 import { LoginMenu } from "./api-authorization/LoginMenu";
 import "./NavMenu.css";
+import logo from '../assets/images/logo-workout.png';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -26,6 +27,11 @@ export class NavMenu extends Component {
     return (
       <header>
         <Navbar id="navbar" className="navbar-expand-sm" container light>
+        <NavbarBrand tag={Link} to="/">
+            Workout Scheduler
+            <img id='logo' src={logo}>
+            </img>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="" />
           <Collapse
             className="d-sm-inline-flex flex-sm-row-reverse"
