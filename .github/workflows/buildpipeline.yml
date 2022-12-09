@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "ui" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "ui" ]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ../../WorkoutScheduler/WorkoutScheduler.csproj
     - name: Build
       run: dotnet build --no-restore
     - name: Test
